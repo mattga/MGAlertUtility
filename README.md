@@ -1,6 +1,6 @@
 # MGAlertUtility
 
-[![Pod Version](https://img.shields.io/cocoapods/v/MGCollapsingHeader.svg?style=flat-square)](https://cocoapods.org/pods/MGCollapsingHeader)
+[![Pod Version](https://img.shields.io/cocoapods/v/MGAlertUtility.svg?style=flat-square)](https://cocoapods.org/pods/MGAlertUtility)
 [![License](https://img.shields.io/badge/license-MIT-red.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
 A simple utility class with static methods for presenting a UIAlertController.
