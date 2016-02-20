@@ -8,7 +8,7 @@ A simple utility class with static methods for presenting a UIAlertController.
 ### Examples
 
 ![OK Alert](Screenshots/ok.png)
-```
+```objc
 [MGAlertUtility showOKAlertWithMessage:@"Check the provided email for further instructions."
                                  title:@"Account created"
                               okAction:^(UIAlertAction *action) {
@@ -17,7 +17,7 @@ A simple utility class with static methods for presenting a UIAlertController.
 ```
 
 ![YesNo Alert](Screenshots/yesno.png)
-```
+```objc
 [MGAlertUtility showYesNoAlertWithMessage:@"What is this"
                                     title:@"idk"
                                    onView:self
@@ -27,7 +27,7 @@ A simple utility class with static methods for presenting a UIAlertController.
 ```
 
 ![Action Sheet Alert](Screenshots/actionsheet.png)
-```
+```objc
 [MGAlertUtility showCancelActionSheet:@"Hello"
                               message:@"How are you?"
                               actions:@{
