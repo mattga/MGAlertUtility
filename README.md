@@ -9,9 +9,9 @@ A simple utility class with static methods for presenting a UIAlertController.
 
 ![OK Alert](Screenshots/ok.png)
 ```objc
-[MGAlertUtility showOKAlertWithMessage:@"Check the provided email for further instructions."
+[MGAlertUtility showOkAlertWithMessage:@"Check the provided email for further instructions."
                                  title:@"Account created"
-                              okAction:^(UIAlertAction *action) {
+                              okAction:^(UIAlertController *alert, UIAlertAction *action) {
                                 NSLog(@"User pressed %@", action.title);
                               }];
 ```
@@ -21,7 +21,7 @@ A simple utility class with static methods for presenting a UIAlertController.
 [MGAlertUtility showYesNoAlertWithMessage:@"What is this"
                                     title:@"idk"
                                    onView:self
-                                 okAction:^(UIAlertAction *action) {
+                                 okAction:^(UIAlertController *alert, UIAlertAction *action) {
                                    NSLog(@"some action '%@'", action.title);
                                  }];
 ```
@@ -31,12 +31,12 @@ A simple utility class with static methods for presenting a UIAlertController.
 [MGAlertUtility showCancelActionSheet:@"Hello"
                               message:@"How are you?"
                               actions:@{
-	                              @"Action 1" : ^(UIAlertAction *action) {
-										NSLog(@"First Action: %@", action.title);
-								  }, 
-								  @"Action 2" : ^(UIAlertAction *action) {
-	  									NSLog(@"Second Action: %@", action.title);
-								  }
-							  }];
+                                        @"Action 1" : ^(UIAlertController *alert, UIAlertAction *action) {
+                                          NSLog(@"First Action: %@", action.title);
+                                        }, 
+                                        @"Action 2" : ^(UIAlertController *alert, UIAlertAction *action) {
+                                          NSLog(@"Second Action: %@", action.title);
+                                        }
+                              }];
 ```
 
