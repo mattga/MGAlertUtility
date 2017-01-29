@@ -31,12 +31,12 @@ A simple utility class with static methods for presenting a UIAlertController.
 [MGAlertUtility showCancelActionSheet:@"Hello"
                               message:@"How are you?"
                               actions:@{
-			      	@"Action 1" : ^(UIAlertController *alert, UIAlertAction *action) {
-					NSLog(@"First Action: %@", action.title);
-				}, 
-				@"Action 2" : ^(UIAlertController *alert, UIAlertAction *action) {
-					NSLog(@"Second Action: %@", action.title);
-				}
+			      		@"Action 1" : ^(UIAlertController *alert, UIAlertAction *action) {
+						NSLog(@"First Action: %@", action.title);
+					}, 
+					@"Action 2" : ^(UIAlertController *alert, UIAlertAction *action) {
+						NSLog(@"Second Action: %@", action.title);
+					}
 			      }];
 ```
 
