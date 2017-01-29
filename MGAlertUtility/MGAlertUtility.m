@@ -32,12 +32,12 @@
 + (UIAlertController *)showErrorMessage:(NSError *)error
 {
 	return
-	[MGAlertUtility showOKAlertWithMessage:error.localizedDescription title:@"ERROR"];
+	[MGAlertUtility showOkAlertWithMessage:error.localizedDescription title:@"ERROR"];
 }
 
 + (UIAlertController *)showErrorMessage:(NSError *)error onView:(UIViewController *)view
 {
-	return [MGAlertUtility showOKAlertWithMessage:error.localizedDescription
+	return [MGAlertUtility showOkAlertWithMessage:error.localizedDescription
 											title:@"ERROR"
 										   onView:view];
 }
@@ -46,7 +46,7 @@
 								 onView:(UIViewController *)view
 							   okAction:(MGAlertAction)action
 {
-	return [MGAlertUtility showOKAlertWithMessage:error.localizedDescription
+	return [MGAlertUtility showOkAlertWithMessage:error.localizedDescription
 											title:@"ERROR"
 										   onView:view
 										 okAction:action];

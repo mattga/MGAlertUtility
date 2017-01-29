@@ -61,7 +61,7 @@ typedef void (^MGAlertAction)(UIAlertController *alert, UIAlertAction *action);
  * @param title The title to give the alert.
  * @return The UIAlertController presented.
  */
-+ (UIAlertController *)showOKAlertWithMessage:(NSString *)message title:(NSString *)title;
++ (UIAlertController *)showOkAlertWithMessage:(NSString *)message title:(NSString *)title;
 
 /*!
  * @discussion Show an alert with one action.
@@ -70,7 +70,7 @@ typedef void (^MGAlertAction)(UIAlertController *alert, UIAlertAction *action);
  * @param action Code block to handle the alert action.
  * @return The UIAlertController presented.
  */
-+ (UIAlertController *)showOKAlertWithMessage:(NSString *)message
++ (UIAlertController *)showOkAlertWithMessage:(NSString *)message
 										title:(NSString *)title
 									 okAction:(MGAlertAction)action;
 
@@ -81,7 +81,7 @@ typedef void (^MGAlertAction)(UIAlertController *alert, UIAlertAction *action);
  * @param view The view controller to present the alert on.
  * @return The UIAlertController presented.
  */
-+ (UIAlertController *)showOKAlertWithMessage:(NSString *)message
++ (UIAlertController *)showOkAlertWithMessage:(NSString *)message
 										title:(NSString *)title
 									   onView:(UIViewController *)view;
 
@@ -93,7 +93,7 @@ typedef void (^MGAlertAction)(UIAlertController *alert, UIAlertAction *action);
  * @param action Code block to handle the alert action.
  * @return The UIAlertController presented.
  */
-+ (UIAlertController *)showOKAlertWithMessage:(NSString *)message
++ (UIAlertController *)showOkAlertWithMessage:(NSString *)message
 										title:(NSString *)title
 									   onView:(UIViewController *)view
 									 okAction:(MGAlertAction)action;
