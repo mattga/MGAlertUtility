@@ -27,7 +27,7 @@
 
 @interface MGAlertUtility : NSObject
 
-typedef void (^MGAlertAction)(UIAlertAction *action);
+typedef void (^MGAlertAction)(UIAlertController *alert, UIAlertAction *action);
 
 /*!
  * @discussion Show an error alert with one action to dismiss the alert.
@@ -52,8 +52,8 @@ typedef void (^MGAlertAction)(UIAlertAction *action);
  * @return The UIAlertController presented.
  */
 + (UIAlertController *)showErrorMessage:(NSError *)error
-                                 onView:(UIViewController *)view
-                               okAction:(MGAlertAction)action;
+								 onView:(UIViewController *)view
+							   okAction:(MGAlertAction)action;
 
 /*!
  * @discussion Show an alert with one action.
@@ -71,8 +71,8 @@ typedef void (^MGAlertAction)(UIAlertAction *action);
  * @return The UIAlertController presented.
  */
 + (UIAlertController *)showOKAlertWithMessage:(NSString *)message
-                                        title:(NSString *)title
-                                     okAction:(MGAlertAction)action;
+										title:(NSString *)title
+									 okAction:(MGAlertAction)action;
 
 /*!
  * @discussion Show an alert with one action to dismiss the alert.
@@ -82,8 +82,8 @@ typedef void (^MGAlertAction)(UIAlertAction *action);
  * @return The UIAlertController presented.
  */
 + (UIAlertController *)showOKAlertWithMessage:(NSString *)message
-                                        title:(NSString *)title
-                                       onView:(UIViewController *)view;
+										title:(NSString *)title
+									   onView:(UIViewController *)view;
 
 /*!
  * @discussion Show an alert with one action.
@@ -94,9 +94,9 @@ typedef void (^MGAlertAction)(UIAlertAction *action);
  * @return The UIAlertController presented.
  */
 + (UIAlertController *)showOKAlertWithMessage:(NSString *)message
-                                        title:(NSString *)title
-                                       onView:(UIViewController *)view
-                                     okAction:(MGAlertAction)action;
+										title:(NSString *)title
+									   onView:(UIViewController *)view
+									 okAction:(MGAlertAction)action;
 
 /*!
  * @discussion Show an alert with a YES and NO action.
@@ -106,8 +106,8 @@ typedef void (^MGAlertAction)(UIAlertAction *action);
  * @return The UIAlertController presented.
  */
 + (UIAlertController *)showYesNoAlertWithMessage:(NSString *)message
-                                           title:(NSString *)title
-                                       yesAction:(MGAlertAction)action;
+										   title:(NSString *)title
+									   yesAction:(MGAlertAction)action;
 
 /*!
  * @discussion Show an alert with a YES and NO action.
@@ -118,9 +118,9 @@ typedef void (^MGAlertAction)(UIAlertAction *action);
  * @return The UIAlertController presented.
  */
 + (UIAlertController *)showYesNoAlertWithMessage:(NSString *)message
-                                           title:(NSString *)title
-                                          onView:(UIViewController *)view
-                                       yesAction:(MGAlertAction)action;
+										   title:(NSString *)title
+										  onView:(UIViewController *)view
+									   yesAction:(MGAlertAction)action;
 
 /*!
  * @discussion Show an alert with a YES and NO action.
@@ -132,10 +132,10 @@ typedef void (^MGAlertAction)(UIAlertAction *action);
  * @return The UIAlertController presented.
  */
 + (UIAlertController *)showYesNoAlertWithMessage:(NSString *)message
-                                           title:(NSString *)title
-                                          onView:(UIViewController *)view
-                                       yesAction:(MGAlertAction)yesAction
-                                        noAction:(MGAlertAction)noAction;
+										   title:(NSString *)title
+										  onView:(UIViewController *)view
+									   yesAction:(MGAlertAction)yesAction
+										noAction:(MGAlertAction)noAction;
 
 /*!
  * @discussion Show an alert with a text input and ok action.
@@ -210,7 +210,7 @@ typedef void (^MGAlertAction)(UIAlertAction *action);
  * @param title The title to give the alert.
  * @param message The message to display.
  * @param view The view controller to present the alert on.
- * @param actions Dictionary of the action titles and handlers. Expects a 
+ * @param actions Dictionary of the action titles and handlers. Expects a
  NSString as the key, and MGAlertAction as the handler.
  * @return The UIAlertController presented.
  */
